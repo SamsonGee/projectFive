@@ -1,5 +1,23 @@
+var currentTime = moment().format('MMM Do h:mm A');
+$("#currentDay").text(currentTime);
+
+var past
+var current
+var future
+var taskHour
+console.log(moment().format('h'));
+console.log($('.hour col-lg-2 col-sm-12'));
+$(".row").each(function(){
+    if(moment().format("h") === $(this).val()) {
+        taskHour = current;
+        console.log(taskHour)
+    }
+console.log($(this).val())
+})
+
+
 //pseudo code this shit....
-var textInput = document.querySelector(".text").text;
+var textInput = document.querySelector(".task").textContent;
 // first it seems like the textarea is capturing any click and type... it's not saving 
 
 //since part of the activity is the save btn, i need to create a save function to local storage.
@@ -14,7 +32,7 @@ var tasks = {};
     var task
 } */
 
-//literally copying code from taskmaster-pro
+//literally copying code from taskmaster-pro]
 
 var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -48,3 +66,5 @@ var saveTasks = function() {
       var text = $(textInput).text;
       console.log(text);
   })
+
+  var time = document.querySelector("#currentDay").textContent;
