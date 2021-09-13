@@ -16,7 +16,7 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: transparent;
+    background-color: rgb(45, 189, 221);
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
@@ -44,17 +44,17 @@ body {
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #7b7b7b;
     color: white;
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #3551ee;
     color: white;
   }
   
   .future {
-    background-color: #77dd77;
+    background-color: #51a351;
     color: white;
   }
   
@@ -64,6 +64,7 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
+    padding-left: 25px;
   }
   
   .saveBtn i:hover {
