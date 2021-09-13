@@ -8,7 +8,6 @@ var current
 var future
 var taskHour
 
-
 // when save button is clicked
 
   $(".saveBtn").on("click", function(){
@@ -31,10 +30,12 @@ var taskHour
     })
   }
 
+// function to process time of day 
 function timeOfDay() {
+    // grabbing text field 
     $("textarea").each(function(){
         var timeBlock = parseInt($(this).attr("hour"));  
-        /* console.log(moment().format('h')); */
+        /* console.log(moment().format('H')); */
         if(timeBlock < currentHour){
             $(this).addClass("past")
         }
@@ -46,6 +47,16 @@ function timeOfDay() {
         }
     })
 };
+
+const element = document.querySelector(".saveBtn");
+
+element.addEventListener("mouseover", event => {
+  /* console.log("Mouse in"); */
+});
+
+element.addEventListener("mouseout", event => {
+  /* console.log("Mouse out"); */
+});
 
 getTasks();
 timeOfDay();
